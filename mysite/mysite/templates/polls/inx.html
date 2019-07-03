@@ -1,0 +1,18 @@
+<h1>Django Data Uploading</h1>
+<ul>
+  {% for index in object_list %}
+    <h2>{{ index.about_head }}</h2>
+    <p>{{ index.about_dis }}</p>
+    <h2>{{ index.services_head }}</h2>
+    <p>{{ index.services_dis }}</p>
+    <h2>{{ index.portfolio_head }}</h2>
+    <h2>{{ index.team_head }}</h2>
+    <p>{{ index.team_dis }}</p>
+    <h2>{{ index.client_head }}</h2>
+    <p>{{ index.client_dis }}</p>
+    <h2>{{ index.contact_head }}</h2>
+    <h2>{{ index.testimonials_head }}</h2>
+    <h2>{{ index.why_head }}</h2>
+    <p>{{ index.why_dis }}</p>
+  {% endfor %}
+</ul>

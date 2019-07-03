@@ -1,0 +1,55 @@
+{% extends 'polls/layout.html' %}
+    {% block content %}
+    <style> 
+            input{
+              width: 80%;
+              padding: 8px 10px;
+              margin: 8px 0;
+              box-sizing: border-box;
+              border-style:solid;
+              border-color:lightgrey;
+              color:#495057;
+            }
+    
+            .div{
+                background-color: #134080;
+                align-content: center;
+                color: whitesmoke;
+    
+            }
+            label{
+                font-size: 100%;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .button {
+            background: #007bff;
+            border: 0;
+            border-radius: 20px;
+            padding: 8px 30px;
+            color: #fff;
+            transition: 0.3s;
+          }
+
+          button:hover{
+            background-color: #3575ce;
+          }
+    </style>
+
+    <form action="{% url 'edit' %}" method="post">{% csrf_token %}
+        <div class="">
+            <br><br><br><br>
+                <h2 align="center">Edit Profile</h2>
+                    <table align="center">
+                    {{ form.as_table }}
+                    </table>
+                <br>
+                <br>   
+            <div class="container-login100-form-btn m-t-20" align="center">
+			    <button class="button">
+				Update Profile
+                </button>
+                <a href="{% url 'profile' %}" class="button">Back</a>    
+            </div> <br>
+        </div>  
+    </form>
+{% endblock %}

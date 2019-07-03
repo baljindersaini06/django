@@ -1,0 +1,9 @@
+
+<h1>Django Image Uploading</h1>
+<ul>
+  {% for port in object_list %}
+    <h2>{{ port.poduct_name }}</h2>
+    <p>{{ port.category_id }}</p>
+    <img src="{{ port.image.url}}" alt="{{ port.poduct_name }}">
+  {% endfor %}
+</ul>

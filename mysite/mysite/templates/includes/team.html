@@ -1,0 +1,37 @@
+{% load static %}
+{% block content %}
+
+<section id="team">
+    {% for index in dat %}
+        <div class="container">
+          <div class="section-header">
+            <h3>{{ index.team_head }}</h3>
+            <p>{{ index.team_dis }}</p>
+          </div>
+          {% endfor %}
+          <div class="row">
+            {% for team in pic %}
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp">
+              <div class="member">
+                <img src="{{team.image.url}}" class="img-fluid" alt="{{team.team_name}}">
+                <div class="member-info">
+                  <div class="member-info-content">
+                    <h4>{{team.team_name}}</h4>
+                    <span>{{team.designation_name}}</span>
+                    <div class="social">
+                      <a href="{{team.email_twitter}}"><i class="fa fa-twitter" alt=""></i></a>
+                      <a href="{{team.email_facebook}}"><i class="fa fa-facebook"></i></a>
+                      <a href="{{team.email_google}}"><i class="fa fa-google-plus"></i></a>
+                      <a href="{{team.email_linkd}}"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+  
+            
+        </div>
+      </section>
+      {% endblock %}

@@ -1,0 +1,69 @@
+{% load static %}
+
+<section id="about">
+        <div class="container">
+            {% for index in dat %}
+          <header class="section-header">
+            <h3>{{ index.about_head }}</h3>
+            <p>{{ index.about_dis }}</p>
+          </header>
+          {% endfor %}
+          <div class="row about-container">
+              {% for aboutinfo in titl %}
+            <div class="col-lg-6 content order-lg-1 order-2">
+                
+              <p>
+                  {{ aboutinfo.About_discription }}
+              </p>
+  
+              <div class="icon-box wow fadeInUp">
+                <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+                <h4 class="title"><a href="">{{ aboutinfo.About_title1 }}</a></h4>
+                <p class="description">{{ aboutinfo.About_discrip1 }}</p>
+              </div>
+  
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon"><i class="fa fa-photo"></i></div>
+                <h4 class="title"><a href="">{{ aboutinfo.About_title2 }}</a></h4>
+                <p class="description">{{ aboutinfo.About_discrip2 }}</p>
+              </div>
+  
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                <h4 class="title"><a href="">{{ aboutinfo.About_title3 }}</a></h4>
+                <p class="description">{{ aboutinfo.About_discrip3 }}</p>
+              </div>
+              
+            </div>
+  
+            <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+              <img src="{{ aboutinfo.image.url}}" class="img-fluid" alt="">
+            </div>
+            {% endfor %}
+          </div>
+          {% for aboutdis in deta %}
+          <div class="row about-extra">
+               
+            <div class="{{ aboutdis.clas }}">
+                
+              <img src="{{ aboutdis.image.url}}" class="img-fluid" alt="">
+            </div>
+            <br><br><br><br>
+            <div class="{{ aboutdis.div_clas }}">
+              <h4>{{ aboutdis.title }}</h4>
+              <p>
+                {{ aboutdis.discription }}
+              </p>
+              <p>
+                  {{ aboutdis.more_discription }}
+              </p>
+              
+            </div>
+            
+          </div>
+          {% endfor %}
+  
+          
+  
+        </div>
+      </section>

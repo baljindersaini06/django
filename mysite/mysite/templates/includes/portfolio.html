@@ -1,0 +1,44 @@
+{% load static %}
+
+<section id="portfolio" class="clearfix">
+        <div class="container">
+            {% for index in dat %}
+          <header class="section-header">
+            <h3 class="section-title">{{ index.portfolio_head }}</h3>
+          </header>
+          {% endfor %}
+          <div class="row">
+            <div class="col-lg-12">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-app">App</li>
+                <li data-filter=".filter-card">Card</li>
+                <li data-filter=".filter-web">Web</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="row portfolio-container">
+              {% for port in pt %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-{{ port.category_id }}">
+              <div class="portfolio-wrap">
+                <img src="{{ port.image.url}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4><a href="#">{{ port.poduct_name }}</a></h4>
+                  <p>App</p>
+                  <div>
+                    <a href="{{ port.image.url}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                    <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            {% endfor %}
+              </div>
+              
+            </div>
+  
+          
+  
+        </section>

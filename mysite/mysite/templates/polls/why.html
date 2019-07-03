@@ -1,0 +1,8 @@
+<h1>Django File Uploading</h1>
+<ul>
+  {% for why in object_list %}
+    <h2>{{ why.card_title }}</h2>
+    <p>{{ why.card_dis }}</p>
+    <a href="{{ why.card_link }}" class="readmore">Read more </a>
+  {% endfor %}
+</ul>

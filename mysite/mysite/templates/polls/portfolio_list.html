@@ -1,0 +1,17 @@
+{% extends 'polls/layout.html' %}
+    {% block content %}
+<br><br><br><br>
+    <h1 align="center">Portfolio</h1>
+<ul>
+  <div margin-left="50px">
+    {% for portfolio in object_list %}
+    <h5 class="text" style="background-color: #1f498d; color: white"><b>ID: {{ portfolio.id }}</b></h5>
+      
+      <b>Portfolio:</b><p>{{ portfolio.portfolio }}</p>
+      <b>Description:</b> <p>{{ portfolio.description }}</p>
+      <b>URL:</b> <br><a href="{{ portfolio.url }}" style="color: black"><span class="glyphicon glyphicon-user"></span>{{ portfolio.url }} </a>
+      <br><br><br>
+    {% endfor %}
+  </div>
+</ul>
+{% endblock %}

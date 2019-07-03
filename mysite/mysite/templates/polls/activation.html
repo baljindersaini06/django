@@ -1,0 +1,12 @@
+{% extends 'polls/layout.html' %}
+    {% block content %}
+<br><br><br><br>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p>your account has been activated</p>
+  
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}

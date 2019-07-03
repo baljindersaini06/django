@@ -1,0 +1,27 @@
+{% load static %}
+<section id="testimonials" class="section-bg">
+        <div class="container">
+          {% for index in dat %}
+          <header class="section-header">
+            <h3>{{ index.testimonials_head }}</h3>
+          </header>
+          {% endfor %}
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="owl-carousel testimonials-carousel wow fadeInUp">
+                  {% for testo in tst %}
+                <div class="testimonial-item">
+                  <img src="{{testo.image.url}}" class="testimonial-img" alt="">
+                  <h3>{{testo.tes_name}}</h3>
+                  <h4>{{testo.tes_designation}}</h4>
+                  <p>
+                      {{testo.tes_des}}
+                  </p>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    

@@ -1,0 +1,31 @@
+{% load static %}
+{% block content %}
+<section id="clients" class="section-bg">
+
+        <div class="container">
+            {% for index in dat %}
+          <div class="section-header">
+            <h3>{{ index.client_head }}</h3>
+            <p>{{ index.client_dis }}</p>
+          </div>
+          {% endfor %}
+          <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+            {% for client in img %}
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              
+              <div class="client-logo">
+
+                <img src="{{client.image.url}}" class="img-fluid" alt="{{client.client_name}}">
+                
+              </div>
+              
+            </div>
+            {% endfor %}
+          
+  
+          </div>
+  
+        </div>
+  
+      </section>
+      {% endblock %}

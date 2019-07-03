@@ -1,0 +1,52 @@
+{% load static %}
+
+<section id="why-us" class="wow fadeIn">
+        <div class="container">
+            {% for index in dat %}
+          <header class="section-header">
+            <h3>{{ index.why_head }}</h3>
+            <p>{{ index.why_dis }}</p>
+          </header>
+          {% endfor %}
+          <div class="row row-eq-height justify-content-center">
+              {% for why in uss %}
+            <div class="col-lg-4 mb-4">
+              <div class="card wow bounceInUp">
+                  <i class="{{ why.card_icon }}"></i>
+                <div class="card-body">
+                  <h5 class="card-title">{{ why.card_title }}</h5>
+                  <p class="card-text">{{ why.card_dis }}</p>
+                  <a href="{{ why.card_link }}" class="readmore">Read more </a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          
+          <div class="row counters">
+              {% for toggle in tog %}
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">{{ toggle.client_toggle }}</span>
+              <p>Clients</p>
+            </div>
+  
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">{{ toggle.project_toggle }}</span>
+              <p>Projects</p>
+            </div>
+  
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">{{ toggle.hours_toggle }}</span>
+              <p>Hours Of Support</p>
+            </div>
+  
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">{{ toggle.workers_toggle }}</span>
+              <p>Hard Workers</p>
+            </div>
+            {% endfor %}
+          </div>
+  
+        </div>
+      </section>
+  

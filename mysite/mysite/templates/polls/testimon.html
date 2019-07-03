@@ -1,0 +1,9 @@
+<h1>Django Image Uploading</h1>
+<ul>
+  {% for testo in object_list %}
+    <h2>{{ testo.tes_name }}</h2>
+    <h4>{{testo.tes_designation}}</h4>
+    <p>{{testo.tes_des}}</p>
+    <img src="{{testo.image.url}}" alt="{{ testo.tes_name }}">
+  {% endfor %}
+</ul>

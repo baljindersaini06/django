@@ -1,0 +1,7 @@
+<h1>Django Image Uploading</h1>
+<ul>
+  {% for team in object_list %}
+    <h2>{{ team.team_name }}</h2>
+    <img src="{{ team.image.url}}" alt="{{ team.team_name }}">
+  {% endfor %}
+</ul>

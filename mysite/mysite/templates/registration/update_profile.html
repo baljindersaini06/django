@@ -1,0 +1,18 @@
+{% extends 'polls/layout.html' %}
+    {% block content %}
+<br><br><br><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table align="center">
+        {{ form.as_table }}
+        </table>
+        <br>
+        <br>   
+        <div class="container-login100-form-btn m-t-20" align="center">
+			<button class="login100-form-btn">
+				Update Profile
+			</button>
+        </div>   
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'polls/layout.html' %}
+    {% block content %}
+    <style>
+  .div{
+      
+      width: auto;
+      background-color: #1f498d;
+      color: white
+  }
+
+.nav{
+    background-color: #134080;
+    width: 19.4%;
+}
+
+.div1{
+    width: 20%;
+    height: 30%;
+}
+
+a{
+    color:white;
+}
+
+h1{
+    text-align: center;
+}
+
+  </style>
+<br><br><br><br>
+    <div class="div">
+        <h1>WELCOME</h1>
+    
+    
+</div>
+<section>
+<div class="div1">
+    <!--<h1>hello</h1>-->
+    <img src="{{ user.userprofile.profile_img.url }}" alt="Trulli" width="250" height="250">
+</div>
+</section><br>
+<nav class="nav">
+        <ul>
+            <a href="{% url 'change_password' %}">Change Password</a><br>
+            <a href="{% url 'edit' %}">Edit Profile</a><br>
+            <a href="">About</a><br>
+            <a href="{% url 'addportfolio' %}">Portfolio</a> 
+        </ul>
+        </nav>
+{% endblock %}

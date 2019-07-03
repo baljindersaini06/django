@@ -1,0 +1,28 @@
+{% load static %}
+
+<section id="services" class="section-bg">
+        <div class="container">
+            {% for index in dat %}
+          <header class="section-header">
+            <h3>{{ index.services_head }}</h3>
+            <p>{{ index.services_dis }}</p>
+          </header>
+          {% endfor %}
+          <div class="row">
+              {% for service in ser %}
+            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+              <div class="box">
+                <div class="icon"><i class="{{ service.select_icon }}" style="color: #ff689b;"></i></div>
+                <h4 class="title"><a href="">{{ service.service_name }}</a></h4>
+                <p class="description">{{ service.service_discription }}</p>
+              </div>
+            </div>
+            
+  
+            {% endfor %}
+            
+  
+          </div>
+  
+        </div>
+      </section>
